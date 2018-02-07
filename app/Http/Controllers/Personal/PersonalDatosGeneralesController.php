@@ -93,7 +93,8 @@ class PersonalDatosGeneralesController extends Controller
         $datos = $cliente->datosGenerales;
         $giros = Giro::get();
         $formaContactos = FormaContacto::get();
-        return view('datosgenerales.edit',['personal'=>$cliente, 'datos'=>$datos, 'giros'=>$giros, 'formaContactos'=>$formaContactos]);
+        return view('datosgenerales.edit',
+            ['personal'=>$cliente, 'datos'=>$datos, 'giros'=>$giros, 'formaContactos'=>$formaContactos]);
     }
 
     /**

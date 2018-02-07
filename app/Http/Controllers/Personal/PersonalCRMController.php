@@ -14,12 +14,12 @@ class PersonalCRMController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Personal $personal)
+    public function index(Personal $cliente)
     {
         //
         
-        $crms = $personal->crm;
-        return view('crm.index',['personal'=>$personal, 'crms'=>$crms]);
+        $crms = $cliente->crm;
+        return view('crm.index',['personal'=>$cliente, 'crms'=>$crms]);
         
 
     }
@@ -40,12 +40,12 @@ class PersonalCRMController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, Personal $personal)
+    public function store(Request $request, Personal $cliente)
     {
         //
         // dd($request->all());
         $crm = CRM::create($request->all());
-        return redirect()->route('personals.crm.index',['personal'=>$personal]);
+        return redirect()->route('clientes.crm.index',['personal'=>$cliente]);
     }
 
     /**
@@ -54,11 +54,11 @@ class PersonalCRMController extends Controller
      * @param  \App\Personal  $personal
      * @return \Illuminate\Http\Response
      */
-    public function show(Personal $personal, $crm)
+    public function show(Personal $cliente, $crm)
     {
         //
         $crm = CRM::findOrFail($crm);
-        return view('crm.view',['personal'=>$personal,'crm'=>$crm]);
+        return view('clientes.view',['personal'=>$cliente,'crm'=>$crm]);
     }
 
     /**

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePersonalsTable extends Migration
+class CreateDireccionFiscalTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,26 +13,21 @@ class CreatePersonalsTable extends Migration
      */
     public function up()
     {
-        Schema::create('personals', function (Blueprint $table) {
+        Schema::create('direccion_fiscal', function (Blueprint $table) {
             $table->increments('id');
-            $table->enum('tipopersona',['Fisica','Moral']);
-            $table->string('nombre')->nullable();
-            $table->string('apellidopaterno')->nullable();
-            $table->string('apellidomaterno')->nullable();
-            $table->string('razonsocial')->nullable();
-            $table->string('alias');
-            $table->string('rfc');
-            $table->string('vendedor')->nullable();
+            $table->integer('personal_id')->unsigned();
+            $table->foreign('personal_id')->references('id')->on('personals');
             $table->string('calle');
             $table->string('numext');
-            $table->string('numinter')->nullable();
+            $table->string('numint')->nullable();
             $table->string('colonia');
             $table->string('municipio');
             $table->string('ciudad');
             $table->string('estado');
+            $table->string('referencia')->nullable();
             $table->string('calle1')->nullable();
             $table->string('calle2')->nullable();
-            $table->string('referencia')->nullable();
+            $table->string('cp')->nullable();
             $table->timestamps();
         });
     }
@@ -44,6 +39,6 @@ class CreatePersonalsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('personals');
+        Schema::dropIfExists('direccion_fiscal');
     }
 }

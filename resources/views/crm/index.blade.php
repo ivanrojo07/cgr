@@ -1,27 +1,29 @@
-@extends('layouts.infopersonal')
-	@section('personal')
+@extends('layouts.infocliente')
+	@section('cliente')
 		<ul role="tablist" class="nav nav-tabs">
-		    <li class="ui-tabs-tab ui-corner-top ui-state-default ui-tab"><a href="{{ route('personals.show',['personal'=>$personal]) }}" class="">Dirección/Domicilio:</a></li>
-		    @if ($personal->tipo == 'Cliente')
-		    <li class="ui-tabs-tab ui-corner-top ui-state-default ui-tab"><a href="{{ route('personals.datoslaborales.index',['personal'=>$personal]) }}" class="">Datos Laborales:</a></li>
-		    <li class="ui-tabs-tab ui-corner-top ui-state-default ui-tab"><a href="{{ route('personals.referenciapersonales.index',['personal'=>$personal]) }}" class="">Referencias Personales:</a></li>
-		    <li class="ui-tabs-tab ui-corner-top ui-state-default ui-tab"><a href="{{ route('personals.datosbeneficiario.index',['personal'=>$personal]) }}" class="">Datos de Beneficiarios:</a></li>
-		    @endif
-		    <li class="ui-tabs-tab ui-corner-top ui-state-default ui-tab"><a href="{{ route('personals.producto.index',['personal'=>$personal]) }}" class="">Productos:</a></li>
-		    <li class=""><a href="{{ route('personals.product.index',['personal'=>$personal]) }}" class="ui-tabsanchor">Productos seleccionados:</a></li>
-		    <li class="active"><a href="{{ route('personals.crm.index',['personal'=>$personal]) }}" class="">C.R.M.:</a></li>
+		   <li class="ui-tabs-tab ui-corner-top ui-state-default ui-tab"><a href="{{ route('clientes.show',['cliente'=>$personal]) }}">Dirección Fisica:</a></li>
+			<li class="ui-tabs-tab ui-corner-top ui-state-default ui-tab"><a href="{{ route('clientes.direccionfisica.index',['cliente'=>$personal]) }}">Dirección Fiscal:</a></li>
+			<li role="presentation" tabindex="-1" class="ui-tabs-tab ui-corner-top ui-state-default ui-tab" aria-controls="tabs-3" aria-labelledby="ui-id-3" aria-selected="false" aria-expanded="false"><a href="{{ route('clientes.contacto.index',['cliente'=>$personal]) }}" role="presentation" tabindex="-1" class="ui-tabs-anchor" id="ui-id-3">Contacto:</a></li>
+			<li class=""><a href="{{ route('clientes.datosgenerales.index',['cliente'=>$personal]) }}" role="presentation" tabindex="-1" class="ui-tabs-anchor" id="ui-id-3">Datos Generales:</a></li>
+		    <li class="active"><a href="{{ route('clientes.crm.index',['personal'=>$personal]) }}" class="ui-tabs-anchor">C.R.M.:</a></li>
 		</ul>
 		<div class="panel-default">
-			<div class="panel-heading">C.R.M.&nbsp;&nbsp;&nbsp;&nbsp;  <i class="fa fa-asterisk" aria-hidden="true"></i>Campos Requeridos</div>
+			<div class="panel-heading">C.R.M. &nbsp;&nbsp;&nbsp;&nbsp; <i class="fa fa-asterisk" aria-hidden="true"></i>Campos Requeridos</div>
 			<div class="panel-body">
 				<div class="panel-body">
-					<form role="form" method="POST" action="{{ route('personals.crm.store',['personal'=>$personal]) }}">
+					<form role="form" method="POST" action="{{ route('clientes.crm.store',['personal'=>$personal]) }}">
 						{{ csrf_field() }}
 						<input type="hidden" name="personal_id" value="{{ $personal->id }}">
 						<div class="col-xs-4 col-xs-offset-10">
-							<a class="btn btn-warning" id="limpiar" onclick="limpiar()"><strong>Limpiar</strong></a>
-							<button id="submit" type="submit" class="btn btn-success"><strong>Guardar</strong></button>
-							<a id="modificar" class="btn btn-primary" onclick="modificar()" style="display: none;">Modificar</a>
+							<a class="btn btn-warning" id="limpiar" onclick="limpiar()">
+							<strong>Limpiar</strong>
+						</a>
+							<button id="submit" type="submit" class="btn btn-success">
+							<strong>Guardar</strong>
+						</button>
+							<a id="modificar" class="btn btn-primary" onclick="modificar()" style="display: none;">
+							<strong>Modificar</strong>
+						</a>
 							
 
 						</div>
@@ -42,7 +44,7 @@
 							<label class="control-label" for="hora">Hora:</label>
 							<input type="text" class="form-control" id="hora" name="hora" name="hora" value="">
 						</div>
-						<div class="form-group col-lg-3 col-md-3 col-sm-6 col-xs-12">
+						<div class="form-group col-lg-6 col-md-3 col-sm-6 col-xs-12">
 							<label class="control-label" for="tipo_cont">Forma de contacto:</label>
 							<select class="form-control" type="select" name="tipo_cont" id="tipo_cont" >
 								<option id="Mail" value="Mail">Email/Correo Electronico</option>
@@ -52,7 +54,7 @@
 								<option id="Otro" value="Otro" selected="selected">Otro</option>
 							</select>
 						</div>
-						<div class="form-group col-lg-3 col-md-3 col-sm-6 col-xs-12">
+						<div class="form-group col-lg-6 col-md-3 col-sm-6 col-xs-12">
 							<label class="control-label" for="status">Estado:</label>
 							<select class="form-control" type="select" name="status" id="status" >
 								<option id="Pendiente" value="Pendiente">Pendiente</option>
@@ -68,22 +70,23 @@
 						</div>
 					</div>
 					<div class="col-md-12 offset-md-2 mt-3">
-						<div class="form-group col-lg-3 col-md-3 col-sm-6 col-xs-12">
+						<div class="form-group col-lg-4 col-md-3 col-sm-6 col-xs-12">
 							<label class="control-label" for="acuerdos">Acuerdos: </label>
 							<textarea class="form-control" rows="5" id="acuerdos" name="acuerdos" maxlength="500"></textarea>
 						</div>
 
-						<div class="form-group col-lg-3 col-md-3 col-sm-6 col-xs-12">
+						<div class="form-group col-lg-4 col-md-3 col-sm-6 col-xs-12">
 							<label class="control-label" for="comentarios">Comentarios: </label>
 							<textarea class="form-control" rows="5" id="comentarios" name="comentarios" maxlength="500"></textarea>
 						</div>
 
-						<div class="form-group col-lg-3 col-md-3 col-sm-6 col-xs-12">
+						<div class="form-group col-lg-4 col-md-3 col-sm-6 col-xs-12">
 							<label class="control-label" for="observaciones">Observaciones: </label>
 							<textarea class="form-control" rows="5" id="observaciones" name="observaciones" maxlength="500"></textarea>
 						</div>
 						
 					</div>
+						
 					</form>
 				</div>
 				<div class="panel-body">
@@ -101,12 +104,13 @@
 									<th>Forma de contacto</th>
 									<th>Acuerdos</th>
 									<th>Observaciones</th>
-									<th>Operación</th>
 								</tr>
 							</thead>
 							@foreach ($crms as $crm)
 								{{-- expr --}}
-								<tr>
+								<tr onclick="crm({{$crm}})" 
+								title="Has Click Aquì para ver o modificar"
+								style="cursor: pointer">
 									<td>{{$crm->fecha_cont}}</td>
 									<td>{{$crm->fecha_aviso}}</td>
 									<td>{{$crm->hora}}</td>
@@ -114,7 +118,6 @@
 									<td>{{$crm->status}}</td>
 									<td>{{substr($crm->acuerdos,0,50)}}...</td>
 									<td>{{substr($crm->observaciones,0,50)}}...</td>
-									<td><a class="btn btn-primary" onclick="crm({{$crm}})" {{-- href="{{ route('personals.crm.show',['personal'=>$personal,'crm'=>$crm]) }}" --}}>Ver</a></td>
 								</tr>
 							@endforeach
 						</table>

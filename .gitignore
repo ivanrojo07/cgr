@@ -1,9 +1,8 @@
-<<<<<<< HEAD
-/node_modules
+
 /public/hot
 /public/storage
 /storage/*.key
-/vendor
+
 /.idea
 /.vagrant
 /.phpintel
@@ -17,7 +16,7 @@ phpunit.xml
 package-lock.json
 yarn.lock
 composer.lock 
-=======
+
 vendor/
 node_modules/
 npm-debug.log
@@ -30,7 +29,6 @@ app/storage/
 public/storage
 public/hot
 storage/*.key
-.env.*.php
 .env.php
 .env
 Homestead.yaml
@@ -38,4 +36,4 @@ Homestead.json
 
 # Rocketeer PHP task runner and deployment package. https://github.com/rocketeers/rocketeer
 .rocketeer/
->>>>>>> 77a9861af0a8b73ab0142316796697b036585161
+

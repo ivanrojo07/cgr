@@ -18,26 +18,31 @@ Route::get('/', function () {
 Auth::routes();
 
 // Route::get('/home', 'HomeController@index')->name('home');
-Route::get('personal', 'Personal\PersonalController@search');
+// Route::get('personal', 'Personal\PersonalController@search');
 // Route::get('clientes', 'Personal\PersonalController@clientes');
 // Route::get('prospectos', 'Personal\PersonalController@prospectos');
-Route::resource('personals', 'Personal\PersonalController');
-Route::resource('personals.datoslaborales', 'Personal\PersonalDatosLabController');
-Route::resource('personals.referenciapersonales', 'Personal\PersonalRefPersonalController');
-Route::resource('personals.datosbeneficiario', 'Personal\PersonalBeneficiarioController');
-Route::resource('personals.producto','Personal\PersonalProductoController');
-Route::resource('personals.crm','Personal\PersonalCRMController');
-Route::resource('productos','Producto\ProductController');
+// Route::resource('personals', 'Personal\PersonalController');
+// Route::resource('personals.datoslaborales', 'Personal\PersonalDatosLabController');
+// Route::resource('personals.referenciapersonales', 'Personal\PersonalRefPersonalController');
+// Route::resource('personals.datosbeneficiario', 'Personal\PersonalBeneficiarioController');
+// Route::resource('personals.producto','Personal\PersonalProductoController');
+// Route::resource('personals.crm','Personal\PersonalCRMController');
+// Route::resource('productos','Producto\ProductController');
 
-Route::get('import-export-csv-excel',array('as'=>'excel.import','uses'=>'FileController@importExportExcelORCSV'));
-Route::post('import-csv-excel',array('as'=>'import-csv-excel','uses'=>'FileController@importFileIntoDB'));
-Route::get('download-excel-file/{type}', array('as'=>'excel-file','uses'=>'FileController@downloadExcelFile'));
+// Route::get('import-export-csv-excel',array('as'=>'excel.import','uses'=>'FileController@importExportExcelORCSV'));
+// Route::post('import-csv-excel',array('as'=>'import-csv-excel','uses'=>'FileController@importFileIntoDB'));
+// Route::get('download-excel-file/{type}', array('as'=>'excel-file','uses'=>'FileController@downloadExcelFile'));
+Route::resource('clientes','Personal\PersonalController');
+Route::resource('clientes.direccionfisica','Personal\PersonalDireccionFisicaController');
+Route::resource('clientes.contacto','Personal\PersonalContactoController');
+Route::resource('clientes.datosgenerales','Personal\PersonalDatosGeneralesController', ['except'=>'show']);
 
+Route::resource('clientes.crm','Personal\PersonalCRMController');
 
 Route::get('buscarcliente','Personal\PersonalController@buscar');
 
-Route::resource('personals.products.transactions', 'Personal\PersonalProductTransactionController',['only'=>'store']);
-Route::resource('personals.product','Personal\PersonalProductController', ['only'=>'index']);
+// Route::resource('personals.products.transactions', 'Personal\PersonalProductTransactionController',['only'=>'store']);
+// Route::resource('personals.product','Personal\PersonalProductController', ['only'=>'index']);
 // Route::resource('datoslaborales','DatosLabController');
 // Route::resource('referenciapersonales','RefPersonalController');
 // Route::resource('beneficiarios', 'BeneficiariosController');
@@ -81,10 +86,10 @@ Route::get('comision',function(){
 Route::resource('formacontactos','FormaContacto\FormaContactoController');
 
 //Route::resource('clientes','Personal\PersonalController');
-Route::resource('clientes','Cliente\ClienteController');
-Route::resource('clientes.direccionfisica','Provedor\ProvedorDireccionFisicaController');
-Route::resource('clientes.contacto','Personal\PersonalContactoController');
-Route::resource('clientes.datosgenerales','Personal\PersonalDatosGeneralesController', ['except'=>'show']);
+// Route::resource('clientes','Cliente\ClienteController');
+// Route::resource('clientes.direccionfisica','Provedor\ProvedorDireccionFisicaController');
+// Route::resource('clientes.contacto','Personal\PersonalContactoController');
+// Route::resource('clientes.datosgenerales','Personal\PersonalDatosGeneralesController', ['except'=>'show']);
 
 
 //-----------------------------------------------------
