@@ -8,6 +8,9 @@
     -ms-background-size:cover;*/
     min-height: 170px;
 }
+.close.alignright {
+    margin-left: 10px;
+}
 
 iframe {
     overflow: hidden;

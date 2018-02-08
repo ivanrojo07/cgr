@@ -137,10 +137,10 @@
 
                                
 
-                                 <a href="#"
+                                 {{-- <a href="#"
                                    onclick="AgregarNuevoTab('{{ url('/sucursales')}}','Sucursales')">
                             <i class="fa fa-university" aria-hidden="true"></i> Sucursales
-                                </a>
+                                </a> --}}
 
                                 <a href="#"
                                    onclick="AgregarNuevoTab('{{ url('/bonos')}}','Bonos')">

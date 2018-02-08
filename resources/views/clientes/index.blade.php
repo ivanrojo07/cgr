@@ -262,29 +262,27 @@
 				<div class="panel-default pestana" id="tab4{{$personal->id}}">
 				 	<div class="panel-heading">Datos Generales:</div>
 				 	@if (count($personal->datosGenerales) == 0)
-						<div class="panel-body">
-							<h3>Aún no tienes datos generales</h3>
-						</div>
-						@endif
-						@if (count($personal->datosGenerales) !=0)
+					<div class="panel-body">
+						<h3>Aún no tienes datos generales</h3>
+					</div>
+					@endif
+					@if (count($personal->datosGenerales) !=0)
 				 	<div class="panel-body">
 				 		<div class="col-md-12 offset-md-2 mt-3">
-				 			<div class="form-group col-lg-3 col-md-3 col-sm-6 col-xs-12">
-				 			<label class="control-label" for="nombre">Tamaño de la empresa:</label>
-								<dd>{{$personal->datosGenerales->nombre}}</dd>
+				 			<div class="form-group col-lg-4 col-md-3 col-sm-6 col-xs-12">
+				 				<label class="control-label" for="nombre">Tamaño de la empresa:</label>
+								<dd>{{ $personal->datosGenerales->tamano}}</dd>
 				 			</div>
-				 		</div>
-				 		<div class="col-md-12 offset-md-2 mt-3">
-				 			<div class="form-group col-lg-3 col-md-3 col-sm-6 col-xs-12">
+				 			<div class="form-group col-lg-4 col-md-3 col-sm-6 col-xs-12">
 				 				<label class="control-label" for="web">Sitio web:</label>
-				 				<dd>{{$personal->datosGenerales->web}}</dd>
+				 				<dd><a href="{{$personal->datosGenerales->web}}" target="_blank">{{$personal->datosGenerales->web}}</a></dd>
 				 			</div>
 
-				 			<div class="form-group col-lg-3 col-md-3 col-sm-6 col-xs-12">
+				 			<div class="form-group col-lg-4 col-md-3 col-sm-6 col-xs-12">
 				 				<label class="control-label" for="comentario">Comentarios:</label>
 				 				<dd>{{$personal->datosGenerales->comentario}}</dd>
 				 			</div>
-				 			<div class="form-group col-lg-3 col-md-3 col-sm-6 col-xs-12">
+				 			<div class="form-group col-lg-4 col-md-3 col-sm-6 col-xs-12">
 				 				<label class="control-label" for="fechacontacto">Fecha de contacto:</label>
 				 				<dd>{{$personal->datosGenerales->fechacontacto}}</dd>
 				 			</div>
@@ -301,22 +299,9 @@
 					{{--   TABLA VISTA RÀPIDA  --}}
 
 @endsection
-
 @section('scripts')
 	{{-- expr --}}
+	<script type="text/javascript" src="{{ asset('js/peticion.js') }}"></script>
 	<script type="text/javascript" src="{{ asset('js/vistarapida.js') }}"></script>
 	<script type="text/javascript" src="{{ asset('js/forms.js') }}"></script>
-	<script type="text/javascript">
-		
-$(function() {
-  $("li").click(function() {
-  // remove classes from all
-  $("li").removeClass("active");
-  // add class to the one we clicked
-  $(this).addClass("active");
- });
-});
-	</script>
 @endsection
-
-

@@ -304,17 +304,7 @@
 
 @section('scripts')
 	{{-- expr --}}
+	<script type="text/javascript" src="{{ asset('js/peticion.js') }}"></script>
 	<script type="text/javascript" src="{{ asset('js/vistarapida.js') }}"></script>
 	<script type="text/javascript" src="{{ asset('js/forms.js') }}"></script>
-	<script type="text/javascript">
-		
-$(function() {
-  $("li").click(function() {
-  // remove classes from all
-  $("li").removeClass("active");
-  // add class to the one we clicked
-  $(this).addClass("active");
- });
-});
-	</script>
 @endsection
