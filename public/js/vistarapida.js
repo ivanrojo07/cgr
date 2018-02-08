@@ -1,3 +1,4 @@
+// $('div#tab').remove();
 $("tr").click(function(){
   $('div.persona').hide();
   // console.log(this.getAttribute('href'));

@@ -51,6 +51,7 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/forms.js') }}"></script>
+     @yield('scripts')
 
     {{-- <script type="text/javascript">
         function formulario(elemento){

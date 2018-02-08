@@ -7,6 +7,9 @@
 .pestana{
 	display: none;
 }
+.persona{
+	display: none;
+}
 .dropdown-submenu {
     position: relative;
 }
