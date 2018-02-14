@@ -54,7 +54,7 @@
 						</div>
 						<div class="form-group col-xs-3">
 							<label class="control-label" for="rfc"><i class="fa fa-asterisk" aria-hidden="true"></i>RFC:</label>
-							<input type="text" class="form-control" id="rfc" name="rfc" value="{{ $empleado->rfc }}" pattern="^[A-Za-z]{4}[0-9]{6}[A-Za-z0-9]{3}" title="Siga el formato 3 letras seguidas por 6 digitos y 3 caracteres" required="required">
+							<input type="text" class="form-control" id="rfc" name="rfc" value="{{ $empleado->rfc }}" pattern="^[A-Za-z]{3}[0-9]{6}[A-Za-z0-9]{3}" title="Siga el formato 3 letras seguidas por 6 digitos y 3 caracteres" required="required">
 						</div>
 					</div>
 				</div>

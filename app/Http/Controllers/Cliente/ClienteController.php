@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Cliente;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use UxWeb\SweetAlert\SweetAlert as Alert;
 use App\Cliente;
 
 class ClienteController extends Controller
@@ -16,6 +17,8 @@ class ClienteController extends Controller
     public function index()
     {
         //
+        $clientes = Cliente::sortable()->paginate(5);
+        return view('clientes.index',['clientes'=>$clientes]);
     }
 
     /**
@@ -25,8 +28,9 @@ class ClienteController extends Controller
      */
     public function create()
     {
-        $clientes=Cliente::get();
-        return view('clientes.create',['clientes'=>$clientes]);
+        $edit = false;
+        $cliente= new Cliente();
+        return view('clientes.create',['cliente'=>$cliente,'edit'=>$edit]);
     }
 
     /**
@@ -38,40 +42,64 @@ class ClienteController extends Controller
     public function store(Request $request)
     {
         //
+        $rfc = Cliente::where('rfc', $request->rfc)->get();
+        if (count($rfc)!=0) {
+            # code...
+            return redirect()->back()->with('errors','El RFC ya existe');                               
+        } else {
+            # code...
+
+            $cliente = Cliente::create($request->all());
+            if ($request['tipo'] == 'Cliente') {
+                Alert::success('Cliente creado con éxito', 'Siga agregando información');
+                return redirect()->route('clientes.direccion.index', ['cliente'=>$cliente]);
+            }
+            if($request['tipo'] == 'Prospecto') {
+                Alert::success('Prospecto creado con éxito');
+                return redirect()->route('clientes.crm.index');
+            }   
+        }
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Cliente $cliente
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Cliente $cliente)
     {
         //
+        return view('clientes.view',['cliente'=>$cliente]);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Cliente $cliente
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Cliente $cliente)
     {
         //
+        $edit=true;
+        return view('clientes.create',['cliente'=>$cliente,'edit'=>$edit]);
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Cliente $cliente
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Cliente $cliente)
     {
         //
+        $cliente->update($request->all());
+        Alert::success('Datos actualizados');
+        return redirect()->route('clientes.show',['cliente'=>$cliente]);
+
     }
 
     /**

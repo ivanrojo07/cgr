@@ -1,12 +1,15 @@
 @extends('layouts.infocliente')
 	@section('cliente')
-					<ul role="tablist" class="nav nav-tabs">
-						<li class="ui-tabs-tab ui-corner-top ui-state-default ui-tab"><a href="{{ route('clientes.show',['cliente'=>$personal]) }}">Dirección Fisica:</a></li>
-						<li class="ui-tabs-tab ui-corner-top ui-state-default ui-tab"><a href="{{ route('clientes.direccionfisica.index',['cliente'=>$personal]) }}">Dirección Fiscal:</a></li>
-						<li class="active"><a href="{{ route('clientes.contacto.index',['cliente'=>$personal]) }}" role="presentation" tabindex="-1" class="ui-tabs-anchor" id="ui-id-3">Contacto:</a></li>
-						<li role="presentation" tabindex="-1" class="ui-tabs-tab ui-corner-top ui-state-default ui-tab" aria-controls="tabs-3" aria-labelledby="ui-id-3" aria-selected="false" aria-expanded="false"><a href="{{ route('clientes.datosgenerales.index', ['cliente'=>$personal]) }}" role="presentation" tabindex="-1" class="ui-tabs-anchor" id="ui-id-3">Datos Generales:</a></li>
-						<li class=""><a href="{{ route('clientes.crm.index',['personal'=>$personal]) }}" class="ui-tabs-anchor">C.R.M.:</a></li>
-					</ul>
+	<ul role="tablist" class="nav nav-tabs">
+		<li  role="presentation"><a href="{{ route('clientes.show',['cliente'=>$cliente]) }}">Dirección/Domicilio:</a></li>
+		@if ($cliente->tipo == 'Cliente')
+			{{-- expr --}}
+		<li id="lidir" role="presentation"><a href="{{ route('clientes.direccion.index',['cliente'=>$cliente]) }}" >Direccion Fiscal:</a></li>
+		<li id="licont" class="active" role="presentation"><a href="{{ route('clientes.contactos.index',['cliente'=>$cliente]) }}">Contactos</a></li>
+		<li id="lidat" role="presentation"><a href="{{ route('clientes.datos.index',['cliente'=>$cliente]) }}">Datos Generales</a></li>
+		@endif
+		<li role="presentation"><a href="{{ route('clientes.crm.index',['cliente'=>$cliente]) }}" class="disabled">C.R.M.</a></li>
+	</ul>
 					<div class="panel panel-default">
 						<div class="panel-heading">Contacto:</div>
 						<div class="panel-body">
@@ -73,7 +76,7 @@
 			  						<dd>{{$contacto->email2}}</dd>
 			  					</div>
 							</div>
-							<a class="btn btn-info" href="{{ route('clientes.contacto.edit',['cliente'=>$personal,'contacto'=>$contacto]) }}"><strong>Editar</strong></a>
+							<a class="btn btn-info" href="{{ route('clientes.contactos.edit',['cliente'=>$cliente,'contacto'=>$contacto]) }}"><strong>Editar</strong></a>
 						</div>
 					</div>
   				</div>
