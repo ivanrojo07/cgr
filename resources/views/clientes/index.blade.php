@@ -20,7 +20,7 @@
 					</span> -->	
 			<div class="col-xs-3">
 
-				<input id="boton-toggle" 
+				<input id="cli" 
 				       href="/clientes" 
 				       type="checkbox" 
 				       data-toggle="toggle" 
@@ -28,8 +28,7 @@
 				       data-off="No" 
 				       data-style="ios" 
 				       checked="true" 
-				       name="cliente" 
-				       id="tgCliente" 
+				       name="cliente"  
 				       class="intro">
 
 				<label>&nbsp;&nbsp;Clientes
@@ -39,7 +38,7 @@
 		<div  class="col-xs-3">
 
 				<input href="/prospectos" 
-				       id="boton-toggle" 
+				       id="pros" 
 				       type="checkbox" 
 				       data-toggle="toggle" 
 				       data-on="Sí" 
@@ -47,7 +46,6 @@
 				       data-off="No" 
 				       data-style="ios" 
 				       checked="true" 
-				       id="tgProspecto"
 				       class="ortni">
 
 				<label>&nbsp;&nbsp;Prospectos

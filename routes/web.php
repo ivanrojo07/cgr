@@ -21,6 +21,7 @@ Auth::routes();
 Route::get('prospectos', 'Personal\PersonalController@search');
 // Route::get('clientes', 'Personal\PersonalController@clientes');
 // Route::get('prospectos', 'Personal\PersonalController@prospectos');
+Route::get('buscarcliente','Cliente\ClienteController@buscar');
 Route::resource('clientes', 'Cliente\ClienteController');
 Route::resource('clientes.direccion','Cliente\ClienteDireccionController');
 Route::resource('clientes.contactos','Cliente\ClienteContactosController');
@@ -33,7 +34,6 @@ Route::resource('personals.datosbeneficiario', 'Personal\PersonalBeneficiarioCon
 Route::resource('personals.producto','Personal\PersonalProductoController');
 Route::resource('personals.crm','Personal\PersonalCRMController');
 
-Route::get('buscarcliente','Personal\PersonalController@buscar');
 
 Route::resource('personals.products.transactions', 'Personal\PersonalProductTransactionController',['only'=>'store']);
 Route::resource('personals.product','Personal\PersonalProductController', ['only'=>'index']);

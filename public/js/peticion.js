@@ -10,7 +10,7 @@ function obtener_registros(busqueda, etiqueta,cli,pro)
 
      // console.log(cli,pro);
      
-	if (etiqueta == 'query') {
+	if (etiqueta == 'cliente') {
 		 
 		$.ajax({
 			//url : "http://localhost/clientes",
@@ -18,7 +18,11 @@ function obtener_registros(busqueda, etiqueta,cli,pro)
 			url : "buscarcliente",
 			type : "GET",
 			dataType : "html",
-			data :{busqueda:busqueda},
+			data :{
+				busqueda:busqueda,
+				clientes:cli,
+				prospecto:pro
+			},
 			}).done(function(resultado){
 			$("#datos").html(resultado);
 
@@ -82,8 +86,8 @@ $(document).on('keyup', ':input', function()
 
 	var valor=$(this).val();
 	var etiqueta = $(this).attr('id');
-	var cli=$('.intro').is(':checked'); 
-	var pro=$('.ortni').is(':checked');
+	var cli=$('#cli.intro').is(':checked'); 
+	var pro=$('#pros.ortni').is(':checked');
 
 	
 	if (valor!="")

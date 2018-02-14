@@ -112,4 +112,45 @@ class ClienteController extends Controller
     {
         //
     }
+
+    public function buscar(Request $request){
+        $query = $request->input('busqueda');
+        //dd($request->inpu('clientes'));
+        if (($request->input('clientes') == "true" && $request->input('prospecto') == "true") || (!$request->input('clientes') && !$request->input('prospecto'))) {
+            # code...
+            $clientes = Cliente::sortable()->where('nombre','LIKE',"%$query%")
+        ->orWhere('apellidopaterno','LIKE',"%$query%")
+        ->orWhere('apellidomaterno','LIKE',"%$query%")
+        ->orWhere('razonsocial','LIKE',"%$query%")
+        ->orWhere('rfc','LIKE',"%$query%")
+        ->orWhere('mail','LIKE',"%$query%")
+        ->get();
+        } 
+            # code...
+        elseif ($request->input('clientes') == "true") {
+            # code...
+            $clientes = Cliente::sortable()->where('tipo','=','Cliente')
+            ->where(function($busqueda) use($query){
+                $busqueda->where('nombre','LIKE',"%$query%")
+                ->orWhere('apellidopaterno','LIKE',"%$query%")
+                ->orWhere('apellidomaterno','LIKE',"%$query%")
+                ->orWhere('razonsocial','LIKE',"%$query%")
+                ->orWhere('rfc','LIKE',"%$query%")
+                ->orWhere('mail','LIKE',"%$query%");
+            })->get();
+        }
+        elseif ($request->input('prospecto') == 'true') {
+             # code...
+            $clientes = Cliente::sortable()->where('tipo','=','Prospecto')
+            ->where(function($busqueda) use($query){
+                $busqueda->where('nombre','LIKE',"%$query%")
+                ->orWhere('apellidopaterno','LIKE',"%$query%")
+                ->orWhere('apellidomaterno','LIKE',"%$query%")
+                ->orWhere('razonsocial','LIKE',"%$query%")
+                ->orWhere('rfc','LIKE',"%$query%")
+                ->orWhere('mail','LIKE',"%$query%");
+            })->get();
+         } 
+         return view('clientes.busqueda',['clientes'=>$clientes]);
+    }
 }

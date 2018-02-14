@@ -12,25 +12,25 @@
 					<th>Operacion</th>
 				</tr>
 			</thead>
-			@foreach($personals as $personal)
+			@foreach($clientes as $cliente)
 				<tr class="active">
-					<td>{{$personal->id}}</td>
+					<td>{{$cliente->id}}</td>
 					<td>
-						@if ($personal->tipopersona == "Fisica")
-						{{$personal->nombre}} {{ $personal->apellidopaterno }} {{ $personal->apellidomaterno }}
+						@if ($cliente->tipopersona == "Fisica")
+						{{$cliente->nombre}} {{ $cliente->apellidopaterno }} {{ $cliente->apellidomaterno }}
 						@else
-						{{$personal->razonsocial}}
+						{{$cliente->razonsocial}}
 						@endif
 					</td>
-					<td>{{ $personal->prioridad }}</td>
-					<td>{{ $personal->tipo }}</td>
-					<td>{{ strtoupper($personal->calificacion) }}</td>
-					<td>{{$personal->mail}}</td>
-					<td>{{$personal->created_at}}</td>
+					<td>{{ $cliente->prioridad }}</td>
+					<td>{{ $cliente->tipo }}</td>
+					<td>{{ strtoupper($cliente->calificacion) }}</td>
+					<td>{{$cliente->mail}}</td>
+					<td>{{$cliente->created_at}}</td>
 					<td></td>
 					<td>
-						<a class="btn btn-success btn-sm" href="{{ route('personals.show',$personal) }}"><i class="fa fa-eye" aria-hidden="true"></i> Ver</a>
-						<a class="btn btn-info btn-sm" href="{{ route('personals.edit', $personal) }}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Editar</a>
+						<a class="btn btn-success btn-sm" href="{{ route('clientes.show',$cliente) }}"><i class="fa fa-eye" aria-hidden="true"></i> Ver</a>
+						<a class="btn btn-info btn-sm" href="{{ route('clientes.edit', $cliente) }}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Editar</a>
 				</tr>
 					</td>
 				</tbody>
