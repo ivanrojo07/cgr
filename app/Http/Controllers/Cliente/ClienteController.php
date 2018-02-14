@@ -56,7 +56,7 @@ class ClienteController extends Controller
             }
             if($request['tipo'] == 'Prospecto') {
                 Alert::success('Prospecto creado con éxito');
-                return redirect()->route('clientes.crm.index');
+                return redirect()->route('clientes.crm.index',['cliente'=>$cliente]);
             }   
         }
     }
