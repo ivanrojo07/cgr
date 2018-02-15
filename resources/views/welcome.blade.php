@@ -137,10 +137,10 @@
 
                                
 
-                                 {{-- <a href="#"
+{{--                                  <a href="#"
                                    onclick="AgregarNuevoTab('{{ url('/sucursales')}}','Sucursales')">
                             <i class="fa fa-university" aria-hidden="true"></i> Sucursales
-                                </a> --}}
+                                </a>
 
                                 <a href="#"
                                    onclick="AgregarNuevoTab('{{ url('/bonos')}}','Bonos')">
@@ -152,7 +152,7 @@
                             <i class="fa fa-money" aria-hidden="true"></i> Comisiones
                                 </a>  
 
-                                 
+ --}}                                 
 
                                 <li class="dropdown-submenu">
                                 <a tabindex="-1" href="#"><i class="fa fa-refresh" aria-hidden="true"></i> Precargas:</a>
