@@ -41,7 +41,7 @@ class ClienteController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
         $rfc = Cliente::where('rfc', $request->rfc)->get();
         if (count($rfc)!=0) {
             # code...
@@ -56,7 +56,8 @@ class ClienteController extends Controller
             }
             if($request['tipo'] == 'Prospecto') {
                 Alert::success('Prospecto creado con éxito');
-                return redirect()->route('clientes.crm.index',['cliente'=>$cliente]);
+               //return redirect()->route('clientes.crm.index',['cliente'=>$cliente]); 
+                return redirect()->route('clientes.contactos.create',['cliente'=>$cliente]);
             }   
         }
     }

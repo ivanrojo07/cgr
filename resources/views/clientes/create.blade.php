@@ -151,9 +151,9 @@
 				<ul role="tablist" class="nav nav-tabs">
 					<li class="active" role="presentation"><a href="#">Dirección/Domicilio:</a></li>
 					<li id="lidir" class="disabled" style="display:none;" role="presentation"><a href="#" class="disabled" id="clienteli1">Direccion Fiscal:</a></li>
-					<li id="licont" class="disabled" disabled style="display:none;" role="presentation"><a href="#" class="disabled">Contactos</a></li>
+					<li id="licont" class="disabled" disabled  role="presentation"><a href="#" class="disabled">Contactos</a></li>
 					<li id="lidat" class="disabled" id="clienteli3" style="display:none;" role="presentation"><a href="#" class="disabled">Datos Generales</a></li>
-					<li class="disabled"  role="presentation"><a href="#" class="disabled">C.R.M.</a></li>
+					<li id="licrm" class="disabled"  role="presentation"><a href="#" class="disabled">C.R.M.</a></li>
 				</ul>
 					@endif
 					@if ($edit == true)
@@ -196,7 +196,18 @@
 						{{-- false expr --}}
 						href="#" class="disabled" 
 					@endif>Datos Generales</a></li>
-					<li role="presentation"><a href="{{ route('clientes.crm.index',['cliente'=>$cliente]) }}" class="disabled">C.R.M.</a></li>
+					<li id="licrm" @if ($cliente->tipo == "Cliente")
+						{{-- expr --}}
+						style="display:none;"
+					@else
+						style="display:inline;" class="disabled"
+					@endif role="presentation"><a @if ($cliente->tipo == "Prospecto")
+						{{-- true expr --}}
+						href="{{ route('clientes.crm.create',['cliente'=>$cliente]) }}"
+					@else
+						{{-- false expr --}}
+						href="#" class="disabled" 
+					@endif >C.R.M.</a></li>
 				</ul>
 					@endif
 				<div class="panel-default">

@@ -1,8 +1,9 @@
 function formulario(elemento){
     if (elemento.value == "Prospecto") {
         document.getElementById('lidir').style.display='none';
-        document.getElementById('licont').style.display='none';
+        document.getElementById('licont').style.display='inline';
         document.getElementById('lidat').style.display='none';
+         document.getElementById('licrm').style.display='inline';
         $("label[for='calle']").html("Calle:");
         $('#calle').prop('required',false);
         $("label[for='numext']").html("Número Exterior:");
@@ -25,6 +26,7 @@ function formulario(elemento){
         document.getElementById('lidir').style.display='inline';
         document.getElementById('licont').style.display='inline';
         document.getElementById('lidat').style.display='inline';
+        document.getElementById('licrm').style.display='none';
         $("label[for='calle']").html("<i class='fa fa-asterisk' aria-hidden='true'></i> Calle:");
         $('#calle').prop('required',true);
         $("label[for='numext']").html("<i class='fa fa-asterisk' aria-hidden='true'></i>Número Exterior:");
