@@ -111,4 +111,10 @@ class GiroController extends Controller
         })->paginate(10);
         return view('giro.index',['giros'=>$giros]);
     }
+
+     public function getGiros(){
+        $giros = Giro::get();
+        return view('precargas.select',['precargas'=>$giros]);
+        
+    }
 }

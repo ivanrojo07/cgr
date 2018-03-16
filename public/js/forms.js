@@ -20,7 +20,8 @@ function formulario(elemento){
         $('#ciudad').prop('required',false);
         $("label[for='estado']").html("Estado:");
         $('#estado').prop('required',false);
-
+        $("label[for='rfc']").html("RFC:");
+        $(' #varrfc').prop('required',false);
     }
     if (elemento.value == "Cliente") {
         document.getElementById('lidir').style.display='inline';
@@ -43,8 +44,11 @@ function formulario(elemento){
         $('#ciudad').prop('required',true);
         $("label[for='estado']").html("<i class='fa fa-asterisk' aria-hidden='true'></i>Estado:");
         $('#estado').prop('required',true);
+        $("label[for='rfc']").html("<i class='fa fa-asterisk' aria-hidden='true'></i>RFC:");
+        $(' #varrfc').prop('required',true);
     }
 }
+//------------------------------------------------------------------------------------
 function persona(elemento){
   if(elemento.value == "Fisica"){
     document.getElementById('perfisica').style.display='inline';
@@ -136,7 +140,4 @@ swal({
   }
 });
 }
-// $('li a').click(function(){
-//     $(this.getAttribute('class')).addClass("active");
-//     $(this.getAttribute('href')).show();
-// });
+

@@ -132,8 +132,8 @@
 									<input type="email" class="form-control" id="mail" name="mail" value="{{ $cliente->mail }}" required>
 								</div>
 								<div class="form-group col-lg-3 col-md-3 col-sm-6 col-xs-12">
-									<label class="control-label" for="rfc"><i class="fa fa-asterisk" aria-hidden="true"></i> RFC:</label>
-									<input type="text" class="form-control" id="varrfc" name="rfc" required minlength="12" maxlength="13" pattern="^[A-Za-z]{4}[0-9]{6}[A-Za-z0-9]{3}" placeholder="Ingrese 13 caracteres" title="Siga el formato 4 letras seguidas por 6 digitos y 3 caracteres" value="{{ $cliente->rfc }}" required>
+									<label class="control-label" for="rfc">RFC:</label>
+									<input type="text" class="form-control" id="varrfc" name="rfc"  minlength="12" maxlength="13" pattern="^[A-Za-z]{4}[0-9]{6}[A-Za-z0-9]{3}" placeholder="Ingrese 13 caracteres" title="Siga el formato 4 letras seguidas por 6 digitos y 3 caracteres" value="{{ $cliente->rfc }}">
 								</div>
 								<div class="form-group col-lg-3 col-md-3 col-sm-6 col-xs-12">
 									<label class="control-label" for="telefono"><i class="fa fa-asterisk" aria-hidden="true" value></i> Número de Telefono:</label>

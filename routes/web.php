@@ -111,3 +111,14 @@ Route::get('sucursales.create','Sucursal\SucursalController@create');
 Route::get('sucursales.index','Sucursal\SucursalController@index');
 
 Route::resource('sucursal','Empleado\EmpleadoSucursalController');
+// ruta de funcion ajax para obtener las precargas
+// Route::get('getareas','Area\AreaController@getAreas');
+// Route::get('getcontratos','Precargas\TipoContratoController@getContratos');
+// Route::get('getbajas','Precargas\TipoBajaController@getBajas');
+// Route::get('getpuestos','Puesto\PuestoController@getPuestos');
+// Route::get('getsucursal','Sucursal\SucursalController@getSucursal');
+// Route::get('getalmacen','Almacen\AlmacenController@getAlmacen');
+// Route::get('getbancos','Banco\BancoController@getBancos');
+Route::get('getgiros','Giro\GiroController@getGiros');
+Route::get('getformas','FormaContacto\FormaContactoController@getFormas');
+//---------------------------------------------------------

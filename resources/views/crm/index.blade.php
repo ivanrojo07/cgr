@@ -41,7 +41,7 @@
 						</div>
 						<div class="form-group col-lg-3 col-md-3 col-sm-6 col-xs-12">
 							<label class="control-label" for="hora">Hora:</label>
-							<input type="text" class="form-control" id="hora" name="hora" name="hora" value="">
+							<input type="time" class="form-control" id="hora" name="hora" name="hora" value="">
 						</div>
 						<div class="form-group col-lg-3 col-md-3 col-sm-6 col-xs-12">
 							<label class="control-label" for="tipo_cont">Forma de contacto:</label>

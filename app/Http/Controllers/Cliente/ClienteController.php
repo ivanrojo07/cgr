@@ -41,8 +41,15 @@ class ClienteController extends Controller
      */
     public function store(Request $request)
     {
+        $rfc=array();
+
+        if($request->rfc!=null){
+            
+            $rfc = Cliente::where('rfc', $request->rfc)->get();
+        }
         
-        $rfc = Cliente::where('rfc', $request->rfc)->get();
+        
+
         if (count($rfc)!=0) {
             # code...
             return redirect()->back()->with('errors','El RFC ya existe');                               

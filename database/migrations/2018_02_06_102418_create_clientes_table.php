@@ -25,7 +25,7 @@ class CreateClientesTable extends Migration
             $table->string('apellidomaterno')->nullable();
             $table->string('razonsocial')->nullable();
             $table->string('mail');
-            $table->string('rfc');
+            $table->string('rfc')->nullable();
             $table->string('telefono');
             $table->string('celular');
             //Domicilio
