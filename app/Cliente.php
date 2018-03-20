@@ -49,7 +49,7 @@ class Cliente extends Model
      *
      * @var array
      */
-    public $Sortable = [
+    public $sortable = [
     	'id',
     	'nombre',
       'apellidopaterno',

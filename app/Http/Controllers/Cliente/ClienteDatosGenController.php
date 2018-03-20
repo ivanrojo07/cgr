@@ -40,11 +40,18 @@ class ClienteDatosGenController extends Controller
      */
     public function create(Cliente $cliente)
     {
-        //
+        
+        
         $giros = Giro::get();
         $formaContactos = FormaContacto::get();
         $datos = new ClienteDatosGen;
-        return view('datosgenerales.create',['cliente'=>$cliente,'giros'=>$giros,'formaContactos' =>$formaContactos, 'datos'=>$datos,'edit'=>false]);
+        return view('datosgenerales.create',
+                    ['cliente'=>$cliente,
+                     'giros'=>$giros,
+                     'formaContactos' =>$formaContactos,
+                     'datos'=>$datos,
+                     'edit'=>false
+                     ]);
     }
 
     /**
