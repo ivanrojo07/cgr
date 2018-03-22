@@ -391,8 +391,8 @@
 	  				<input type="text" class="form-control" id="aba_extranjero" name="aba_extranjero">
 	 		  	 </div>
 	 		  	 <div class="col-sm-3">
-	 		  		<label class="control-label" for="SWIFT_extranjero"><i class="fa fa-asterisk" aria-hidden="true"></i>SWIFT:</label>
-	  				<input type="text" class="form-control" id="SWIFT_extranjero" name="SWIFT_extranjero">
+	 		  		<label class="control-label" for="swift_extranjero"><i class="fa fa-asterisk" aria-hidden="true"></i>SWIFT:</label>
+	  				<input type="text" class="form-control" id="swift_extranjero" name="swift_extranjero">
 	 		  	 </div><br>
 	 		  	 <div class="col-sm-3">
 	 		  	 	<div class="col-xs-offset-5">
@@ -405,6 +405,71 @@
 	 			</div>
 	 		</div>
 	 		
+	 	</div>
+	 	<div class="panel-heading jumbotron " style="color: black;"><strong>Carga de Documentos:</strong>&nbsp;&nbsp;&nbsp;&nbsp; <i class="fa fa-asterisk" aria-hidden="true"></i>Documentos Requeridos</div>
+	 	<div class="panel-body">
+	 		<div class="container-fluid">
+	 			<div class="row">
+	 				<div class="col-sm-3">
+	 					<label class="control-label" for="carta_encomienda"><i class="fa fa-asterisk" aria-hidden="true"></i>Carta Encomienda Actualizada:</label>
+	 					<input type="file" class="form-control" id="carta_encomienda" name="carta_encomienda" >
+	 				</div>
+	 				<div class="col-sm-3">
+	 					<label class="control-label" for="encargo_conferido"><i class="fa fa-asterisk" aria-hidden="true"></i>Formato Encargo Conferido:</label>
+	 					<input type="file" class="form-control" id="encargo_conferido" name="encargo_conferido" >
+	 				</div>
+	 				<div class="col-sm-3">
+	 					<label class="control-label" for="padron_importadores"><i class="fa fa-asterisk" aria-hidden="true"></i>Registro Padrón de Importadores:</label>
+	 					<input type="file" class="form-control" id="padron_importadores" name="padron_importadores" >
+	 				</div>
+	 				<div class="col-sm-3">
+	 					<label class="control-label" for="acta_constitutiva"><i class="fa fa-asterisk" aria-hidden="true"></i>Acta Constitutiva Empresa:</label>
+	 					<input type="file" class="form-control" id="acta_constitutiva" name="acta_constitutiva" >
+	 				</div>
+	 			</div><br>
+	 			<div class="row">
+	 				<div class="col-sm-3">
+	 					<label class="control-label" for="r1_r2">R1 y R2:</label>
+	 					<input type="file" class="form-control" id="r1_r2" name="r1_r2" >
+	 				</div>
+	 				<div class="col-sm-3">
+	 					<label class="control-label" for="constancia_fiscal"><i class="fa fa-asterisk" aria-hidden="true"></i>Constancia Situación Fiscal:</label>
+	 					<input type="file" class="form-control" id="constancia_fiscal" name="constancia_fiscal" >
+	 				</div>
+	 				<div class="col-sm-3">
+	 					<label class="control-label" for="cedula_fiscal"><i class="fa fa-asterisk" aria-hidden="true"></i>Cédula Fiscal:</label>
+	 					<input type="file" class="form-control" id="cedula_fiscal" name="cedula_fiscal" >
+	 				</div>
+	 				<div class="col-sm-3">
+	 					<label class="control-label" for="comprobante_domicilio"><i class="fa fa-asterisk" aria-hidden="true"></i>Comprobante de Domicilio:</label>
+	 					<input type="file" class="form-control" id="comprobante_domicilio" name="comprobante_domicilio" >
+	 				</div>
+	 			</div><br>
+	 			<div class="row">
+	 				<div class="col-sm-3">
+	 					<label class="control-label" for="identificacion_oficial">Identificación Oficial:</label>
+	 					<input type="file" class="form-control" id="identificacion_oficial" name="identificacion_oficial" >
+	 				</div>
+	 				<div class="col-sm-3">
+	 					<label class="control-label" for="copia_curp"><i class="fa fa-asterisk" aria-hidden="true"></i>C.U.R.P:</label>
+	 					<input type="file" class="form-control" id="copia_curp" name="copia_curp" >
+	 				</div>
+	 				<div class="col-sm-3">
+	 					<label class="control-label" for="copia_rfc"><i class="fa fa-asterisk" aria-hidden="true"></i>R.F.C:</label>
+	 					<input type="file" class="form-control" id="copia_rfc" name="copia_rfc" >
+	 				</div>
+	 				<div class="col-sm-3">
+	 					<label class="control-label" for="poder_notarial"><i class="fa fa-asterisk" aria-hidden="true"></i>Poder Notarial Representante:</label>
+	 					<input type="file" class="form-control" id="poder_notarial" name="poder_notarial" >
+	 				</div>
+	 			</div><br>
+	 			<div class="row">
+	 				<div class="col-sm-3">
+	 					<label class="control-label" for="immex_proec"><i class="fa fa-asterisk" aria-hidden="true"></i>IMMEX/PROSEC/SICEX:</label>
+	 					<input type="file" class="form-control" id="immex_proec" name="immex_proec" >
+	 				</div>
+	 			</div>
+	 		</div>
 	 	</div>
 	 	@endif
 	 	</form>
