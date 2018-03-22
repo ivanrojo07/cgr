@@ -29,8 +29,16 @@
 					<td>{{$cliente->created_at}}</td>
 					<td></td>
 					<td>
-						<a class="btn btn-success btn-sm" href="{{ route('clientes.show',$cliente) }}"><i class="fa fa-eye" aria-hidden="true"></i> Ver</a>
-						<a class="btn btn-info btn-sm" href="{{ route('clientes.edit', $cliente) }}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Editar</a>
+						<div class="row">
+							<div class="col-sm-4">
+								<a class="btn btn-success btn-sm" href="{{ route('clientes.show',$cliente) }}"><i class="fa fa-eye" aria-hidden="true"></i> Ver</a>
+							</div>
+							<div class="col-sm-4">
+								<a class="btn btn-info btn-sm" href="{{ route('clientes.edit', $cliente) }}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Editar</a>
+							</div>
+						</div>
+					</td>	
+						
 				</tr>
 					</td>
 				</tbody>

@@ -11,20 +11,28 @@
 				
 				<div class="input-group" 
 				     id="datos1">
-				     
-					<input type="text" 
+				  <div class="row">
+				  	<div class="col-sm-9">
+				  		<input type="text" 
 					       id="empleado" 
 					       name="query" 
 					       class="form-control" 
 					       placeholder="Buscar..."
 					       onKeypress="if(event.keyCode == 13) event.returnValue = false;" 
 					       autofocus>
-
-
-				 <a class="btn btn-info" href="{{ route('empleados.create')}}">
+				  	</div>
+				  	<div class="col-sm-3">
+				  		<a class="btn btn-info" href="{{ route('empleados.create')}}">
 							        <strong>
 							   Agregar Empleado</strong>
 							</a>
+				  	</div>
+				  	
+
+
+				 
+				  </div>   
+					
 					
 				</div>
 			</form>
@@ -56,8 +64,14 @@
 					<td>{{$empleado->apmaterno}}</td>
 					<td>{{$empleado->rfc}}</td>
 					<td>
-						<a class="btn btn-success btn-sm" href="{{ route('empleados.show',['empleado'=>$empleado]) }}"><i class="fa fa-eye" aria-hidden="true"></i><strong> Ver</strong></a>
-						<a class="btn btn-info btn-sm" href="{{ route('empleados.edit',['empleado'=>$empleado]) }}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i><strong>Editar</strong></a>
+					  <div class="row">
+					  	<div class="col-sm-4">
+					  		<a class="btn btn-success btn-sm" href="{{ route('empleados.show',['empleado'=>$empleado]) }}"><i class="fa fa-eye" aria-hidden="true"></i><strong> Ver</strong></a>
+					  	</div>
+					  	<div class="col-sm-4">
+					  		<a class="btn btn-info btn-sm" href="{{ route('empleados.edit',['empleado'=>$empleado]) }}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i><strong>Editar</strong></a>
+					  	</div>
+					  </div>	
 					</td>
 				</tr>
 			@endforeach

@@ -22,8 +22,14 @@
 					<td>{{$empleado->apmaterno}}</td>
 					<td>{{$empleado->rfc}}</td>
 					<td>
-						<a class="btn btn-success btn-sm" href="{{ route('empleados.show',['empleado'=>$empleado]) }}"><i class="fa fa-eye" aria-hidden="true"></i><strong> Ver</strong></a>
-						<a class="btn btn-info btn-sm" href="{{ route('empleados.edit',['empleado'=>$empleado]) }}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i><strong> Editar </strong></a>
+					  <div class="row">
+					  	<div class="col-sm-4">
+					  		<a class="btn btn-success btn-sm" href="{{ route('empleados.show',['empleado'=>$empleado]) }}"><i class="fa fa-eye" aria-hidden="true"></i><strong> Ver</strong></a>
+					  	</div>
+					  	<div class="col-sm-4">
+					  		<a class="btn btn-info btn-sm" href="{{ route('empleados.edit',['empleado'=>$empleado]) }}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i><strong>Editar</strong></a>
+					  	</div>
+					  </div>
 					</td>
 				</tr>
 			@endforeach
