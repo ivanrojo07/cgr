@@ -13,7 +13,7 @@
 		@endif
 	</ul>
 	<div class="panel panel-default">
-	 	<div class="panel-heading">Datos Generales:</div>
+	 	<div class="panel-heading"><strong>Datos Generales:</strong></div>
 	 	<div class="panel-body">
 	 		<div class="col-md-12 offset-md-2 mt-3">
 	 			<div class="form-group col-lg-4 col-md-3 col-sm-6 col-xs-12">
@@ -59,5 +59,97 @@
  		<a class="btn btn-info" href="{{ route('clientes.datos.edit',['cliente'=>$cliente,'datos'=>$datos]) }}">
  			<strong>Editar</strong></a>
 	 	</div>
+	 	<div class="panel-heading"><strong>Nacionalidad:</strong></div>
+	 	<div class="panel-body">
+	 		<div class="container-fluid">
+	 			<div class="row">
+	 				<div class="col-sm-3">
+	 					<label class="control-label" for="nombre">Nacionalidad:</label>
+					<dd>Extrajero/Mexicano</dd>
+	 				</div>
+	 				<div class="col-sm-3">
+	 					<label class="control-label" for="nombre">C.U.R.P:</label>
+					<dd>EMX346HDF45</dd>
+	 				</div>
+	 				<div class="col-sm-3">
+	 					<label class="control-label" for="nombre">R.F.C:</label>
+					<dd>EMX346HDF45ASC</dd>
+	 				</div>
+	 				<div class="col-sm-3">
+	 					<label class="control-label" for="nombre">TAX/RUC/NIT:</label>
+					<dd>EXTRNJ3657USA45ASC</dd>
+	 				</div>
+	 			</div>
+	 		</div>
+		</div>
+		<div class="panel-heading"><strong>Datos de Contacto para Cobros:</strong></div>
+	 	<div class="panel-body">
+	 		<div class="container-fluid">
+	 			<div class="row">
+	 				<div class="col-sm-3">
+	 					<label class="control-label" for="nombre">Nacionalidad:</label>
+					<dd>Extrajero/Mexicano</dd>
+	 				</div>
+	 				<div class="col-sm-3">
+	 					<label class="control-label" for="nombre">C.U.R.P:</label>
+					<dd>EMX346HDF45</dd>
+	 				</div>
+	 				<div class="col-sm-3">
+	 					<label class="control-label" for="nombre">R.F.C:</label>
+					<dd>EMX346HDF45ASC</dd>
+	 				</div>
+	 				<div class="col-sm-3">
+	 					<label class="control-label" for="nombre">TAX/RUC/NIT:</label>
+					<dd>EXTRNJ3657USA45ASC</dd>
+	 				</div>
+	 			</div>
+	 		</div>
+		</div>
+		<div class="panel-heading"><strong>Información Bancaria:</strong></div>
+	 	<div class="panel-body">
+	 		<div class="container-fluid">
+	 			<div class="row">
+	 				<div class="col-sm-3">
+	 					<label class="control-label" for="nombre">Nacionalidad:</label>
+					<dd>Extrajero/Mexicano</dd>
+	 				</div>
+	 				<div class="col-sm-3">
+	 					<label class="control-label" for="nombre">C.U.R.P:</label>
+					<dd>EMX346HDF45</dd>
+	 				</div>
+	 				<div class="col-sm-3">
+	 					<label class="control-label" for="nombre">R.F.C:</label>
+					<dd>EMX346HDF45ASC</dd>
+	 				</div>
+	 				<div class="col-sm-3">
+	 					<label class="control-label" for="nombre">TAX/RUC/NIT:</label>
+					<dd>EXTRNJ3657USA45ASC</dd>
+	 				</div>
+	 			</div>
+	 		</div>
+		</div>
+		<div class="panel-heading"><strong>Documentos:</strong></div>
+	 	<div class="panel-body">
+	 		<div class="container-fluid">
+	 			<div class="row">
+	 				<div class="col-sm-3">
+	 					<label class="control-label" for="nombre">Nacionalidad:</label>
+					<dd>Extrajero/Mexicano</dd>
+	 				</div>
+	 				<div class="col-sm-3">
+	 					<label class="control-label" for="nombre">C.U.R.P:</label>
+					<dd>EMX346HDF45</dd>
+	 				</div>
+	 				<div class="col-sm-3">
+	 					<label class="control-label" for="nombre">R.F.C:</label>
+					<dd>EMX346HDF45ASC</dd>
+	 				</div>
+	 				<div class="col-sm-3">
+	 					<label class="control-label" for="nombre">TAX/RUC/NIT:</label>
+					<dd>EXTRNJ3657USA45ASC</dd>
+	 				</div>
+	 			</div>
+	 		</div>
+		</div>
 	</div>
 	@endsection

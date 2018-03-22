@@ -406,6 +406,7 @@
 	 		</div>
 	 		
 	 	</div>
+	 	</form>
 	 	<div class="panel-heading jumbotron " style="color: black;"><strong>Carga de Documentos:</strong>&nbsp;&nbsp;&nbsp;&nbsp; <i class="fa fa-asterisk" aria-hidden="true"></i>Documentos Requeridos</div>
 	 	<div class="panel-body">
 	 		<div class="container-fluid">
@@ -468,11 +469,19 @@
 	 					<label class="control-label" for="immex_proec"><i class="fa fa-asterisk" aria-hidden="true"></i>IMMEX/PROSEC/SICEX:</label>
 	 					<input type="file" class="form-control" id="immex_proec" name="immex_proec" >
 	 				</div>
+	 				<div class="col-sm-3">
+	 		  	 	<div class="col-xs-offset-5"><br>
+				<button  class="btn btn-primary">
+			<strong>Enviar</strong>
+			</button>
+				
+			</div>	
+	 		  	 </div>
 	 			</div>
 	 		</div>
 	 	</div>
 	 	@endif
-	 	</form>
+	 	
 	 	</div>
 	</div>
 	@endsection
