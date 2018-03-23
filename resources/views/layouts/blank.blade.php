@@ -24,8 +24,7 @@
          <!-- Custom Fonts -->
         <link href="{{asset('font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-         
-
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/fileinput.min.css') }}">
     </head>
 <body>
     <div id="app">
@@ -39,7 +38,7 @@
     <script src="{{ asset('js/peticion.js') }}"></script>
     <script src="{{ asset('js/app.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/forms.js') }}"></script>
-     @yield('scripts')
+    
     <script src="{{ asset('js/sweetalert.js') }}"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <script src="{{ asset('bootstrap-toggle/js/bootstrap-toggle.js') }}"></script>
@@ -48,5 +47,6 @@
     <script type="https://unpkg.com/sweetalert/dist/main.js"></script>
     {{-- ¿Por qué usamos JQUERY 2.2.2 Y 3.2.1?--}}
      <script type="https://unpkg.com/sweetalert/dist/jquery-3.2.1.min"></script>
+     @yield('scripts')
 </body>
 </html>

@@ -62,7 +62,7 @@ class ClienteDatosGenController extends Controller
      */
     public function store(Request $request, Cliente $cliente)
     {
-        //
+        dd($request);
         $datos = ClienteDatosGen::create($request->all());
         Alert::success('Datos generales creado con éxito');
         return redirect()->route('clientes.datos.index',['cliente'=>$cliente]);
@@ -106,7 +106,7 @@ class ClienteDatosGenController extends Controller
      */
     public function update(Request $request, Cliente $cliente, $datos)
     {
-        //
+        dd($request);
         $datos = ClienteDatosGen::find($datos);
         $datos->update($request->all());
         Alert::success('Datos generales actualizados con éxito');

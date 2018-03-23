@@ -124,6 +124,11 @@
 		 				<label class="control-label" for="tax"><i class="fa fa-asterisk" aria-hidden="true"></i>TAX/RUC/NIT:</label>
 		 				<input type="text" class="form-control" id="tax" name="tax">
 		 			</div>
+		 			 <div class="col-sm-3">
+	 		  	 	<div class="col-xs-offset-4">
+				<input type="submit" class="btn btn-success">
+			        </div>	
+	 	          </div>
 		 		</div>
 		 	</div><br>
 	 		<div class="container-fluid" id="nacional_div">
@@ -346,21 +351,14 @@
 	 		  		<label class="control-label" for="forma_pago_nacional"><i class="fa fa-asterisk" aria-hidden="true"></i>Forma de Pago:</label>
 	  				<input type="text" class="form-control" id="forma_pago_nacional" name="forma_pago_nacional">
 	 		  	 </div>
-	 			</div>
+	 			</div><br>
 	 			<div class="row">
 	 				<div class="col-sm-3">
 	 		  		<label class="control-label" for="cfdi_nacional"><i class="fa fa-asterisk" aria-hidden="true"></i>Uso del CFDI:</label>
 	  				<input type="text" class="form-control" id="cfdi_nacional" name="cfdi_nacional">
-	 		  	 </div><br>
-	 		  	 <div class="col-sm-3">
-	 		  	 	<div class="col-xs-offset-10">
-				<button type="submit" class="btn btn-success">
-			<strong>	Guardar</strong>
-			</button>
-				
-			</div>	
 	 		  	 </div>
-	 			</div>
+	 		  	
+	 			</div><br>
 	 		</div>
 	 		<div class="container-fluid" id="bancaria_extranjero_div" style="display: none;">
 	 			<div class="row">
@@ -383,7 +381,7 @@
 	 			</div><br>
 	 			<div class="row">
 	 				<div class="col-sm-3">
-	 		  		<label class="control-label" for="clave_internacional_extranjero"><i class="fa fa-asterisk" aria-hidden="true"></i>Clave Internacional para Tranferencias:</label>
+	 		  		<label class="control-label" for="clave_internacional_extranjero"><i class="fa fa-asterisk" aria-hidden="true"></i>Clave Internacional Tranferencias:</label>
 	  				<input type="text" class="form-control" id="clave_internacional_extranjero" name="clave_internacional_extranjero">
 	 		  	 </div>
 	 		  	 <div class="col-sm-3">
@@ -393,83 +391,81 @@
 	 		  	 <div class="col-sm-3">
 	 		  		<label class="control-label" for="swift_extranjero"><i class="fa fa-asterisk" aria-hidden="true"></i>SWIFT:</label>
 	  				<input type="text" class="form-control" id="swift_extranjero" name="swift_extranjero">
-	 		  	 </div><br>
-	 		  	 <div class="col-sm-3">
-	 		  	 	<div class="col-xs-offset-5">
-				<button type="submit" class="btn btn-success">
-			<strong>	Guardar</strong>
-			</button>
-				
-			</div>	
 	 		  	 </div>
-	 			</div>
+	 		  	 
+	 		  	</div><br>
 	 		</div>
-	 		
-	 	</div>
-	 	</form>
+	 			  </form>
+	 	
 	 	<div class="panel-heading jumbotron " style="color: black;"><strong>Carga de Documentos:</strong>&nbsp;&nbsp;&nbsp;&nbsp; <i class="fa fa-asterisk" aria-hidden="true"></i>Documentos Requeridos</div>
 	 	<div class="panel-body">
 	 		<div class="container-fluid">
 	 			<div class="row">
-	 				<div class="col-sm-3">
+	 				<div class="col-sm-4 form-group">
+
 	 					<label class="control-label" for="carta_encomienda"><i class="fa fa-asterisk" aria-hidden="true"></i>Carta Encomienda Actualizada:</label>
-	 					<input type="file" class="form-control" id="carta_encomienda" name="carta_encomienda" >
+	 					<input type="file" class="file" id="carta_encomienda" name="carta_encomienda">
 	 				</div>
-	 				<div class="col-sm-3">
+	 				<div class="col-sm-4">
 	 					<label class="control-label" for="encargo_conferido"><i class="fa fa-asterisk" aria-hidden="true"></i>Formato Encargo Conferido:</label>
-	 					<input type="file" class="form-control" id="encargo_conferido" name="encargo_conferido" >
+	 					<input type="file" class="file" id="encargo_conferido" name="encargo_conferido" >
 	 				</div>
-	 				<div class="col-sm-3">
+	 				<div class="col-sm-4">
 	 					<label class="control-label" for="padron_importadores"><i class="fa fa-asterisk" aria-hidden="true"></i>Registro Padrón de Importadores:</label>
-	 					<input type="file" class="form-control" id="padron_importadores" name="padron_importadores" >
+	 					<input type="file" class="file" id="padron_importadores" name="padron_importadores" >
 	 				</div>
-	 				<div class="col-sm-3">
+	 			</div><br>
+	 			<div class="row">
+	 				<div class="col-sm-4">
 	 					<label class="control-label" for="acta_constitutiva"><i class="fa fa-asterisk" aria-hidden="true"></i>Acta Constitutiva Empresa:</label>
-	 					<input type="file" class="form-control" id="acta_constitutiva" name="acta_constitutiva" >
+	 					<input type="file" class="file" id="acta_constitutiva" name="acta_constitutiva" >
 	 				</div>
-	 			</div><br>
-	 			<div class="row">
-	 				<div class="col-sm-3">
-	 					<label class="control-label" for="r1_r2">R1 y R2:</label>
-	 					<input type="file" class="form-control" id="r1_r2" name="r1_r2" >
-	 				</div>
-	 				<div class="col-sm-3">
+	 				<div class="col-sm-4">
 	 					<label class="control-label" for="constancia_fiscal"><i class="fa fa-asterisk" aria-hidden="true"></i>Constancia Situación Fiscal:</label>
-	 					<input type="file" class="form-control" id="constancia_fiscal" name="constancia_fiscal" >
+	 					<input type="file" class="file" id="constancia_fiscal" name="constancia_fiscal" >
 	 				</div>
-	 				<div class="col-sm-3">
+	 				<div class="col-sm-4">
 	 					<label class="control-label" for="cedula_fiscal"><i class="fa fa-asterisk" aria-hidden="true"></i>Cédula Fiscal:</label>
-	 					<input type="file" class="form-control" id="cedula_fiscal" name="cedula_fiscal" >
+	 					<input type="file" class="file" id="cedula_fiscal" name="cedula_fiscal" >
 	 				</div>
-	 				<div class="col-sm-3">
+	 				
+	 			</div><br>
+	 			<div class="row">
+	 				<div class="col-sm-4">
 	 					<label class="control-label" for="comprobante_domicilio"><i class="fa fa-asterisk" aria-hidden="true"></i>Comprobante de Domicilio:</label>
-	 					<input type="file" class="form-control" id="comprobante_domicilio" name="comprobante_domicilio" >
+	 					<input type="file" class="file" id="comprobante_domicilio" name="comprobante_domicilio" >
 	 				</div>
-	 			</div><br>
-	 			<div class="row">
-	 				<div class="col-sm-3">
+	 				<div class="col-sm-4">
 	 					<label class="control-label" for="identificacion_oficial">Identificación Oficial:</label>
-	 					<input type="file" class="form-control" id="identificacion_oficial" name="identificacion_oficial" >
+	 					<input type="file" class="file" id="identificacion_oficial" name="identificacion_oficial" >
 	 				</div>
-	 				<div class="col-sm-3">
+	 				<div class="col-sm-4">
 	 					<label class="control-label" for="copia_curp"><i class="fa fa-asterisk" aria-hidden="true"></i>C.U.R.P:</label>
-	 					<input type="file" class="form-control" id="copia_curp" name="copia_curp" >
+	 					<input type="file" class="file" id="copia_curp" name="copia_curp" >
 	 				</div>
-	 				<div class="col-sm-3">
-	 					<label class="control-label" for="copia_rfc"><i class="fa fa-asterisk" aria-hidden="true"></i>R.F.C:</label>
-	 					<input type="file" class="form-control" id="copia_rfc" name="copia_rfc" >
-	 				</div>
-	 				<div class="col-sm-3">
-	 					<label class="control-label" for="poder_notarial"><i class="fa fa-asterisk" aria-hidden="true"></i>Poder Notarial Representante:</label>
-	 					<input type="file" class="form-control" id="poder_notarial" name="poder_notarial" >
-	 				</div>
+	 				
 	 			</div><br>
 	 			<div class="row">
-	 				<div class="col-sm-3">
-	 					<label class="control-label" for="immex_proec"><i class="fa fa-asterisk" aria-hidden="true"></i>IMMEX/PROSEC/SICEX:</label>
-	 					<input type="file" class="form-control" id="immex_proec" name="immex_proec" >
+	 				<div class="col-sm-4">
+	 					<label class="control-label" for="copia_rfc"><i class="fa fa-asterisk" aria-hidden="true"></i>R.F.C:</label>
+	 					<input type="file" class="file" id="copia_rfc" name="copia_rfc" >
 	 				</div>
-	 				<div class="col-sm-3">
+	 				<div class="col-sm-4">
+	 					<label class="control-label" for="poder_notarial"><i class="fa fa-asterisk" aria-hidden="true"></i>Poder Notarial Representante:</label>
+	 					<input type="file" class="file" id="poder_notarial" name="poder_notarial" >
+	 				</div>
+	 				<div class="col-sm-4">
+	 					<label class="control-label" for="immex_proec"><i class="fa fa-asterisk" aria-hidden="true"></i>IMMEX/PROSEC/SICEX:</label>
+	 					<input type="file" class="file" id="immex_proec" name="immex_proec" >
+	 				</div>
+	 				
+	 			</div><br>
+	 			<div class="row">
+	 				<div class="col-sm-4">
+	 					<label class="control-label" for="r1_r2">R1 y R2:</label>
+	 					<input type="file" class="file" id="r1_r2" name="r1_r2" >
+	 				</div>
+	 				<div class="col-sm-4">
 	 		  	 	<div class="col-xs-offset-5"><br>
 				<button  class="btn btn-primary">
 			<strong>Enviar</strong>
@@ -477,9 +473,12 @@
 				
 			</div>	
 	 		  	 </div>
+	 		  
+	 		  	 </div>
 	 			</div>
 	 		</div>
 	 	</div>
+	
 	 	@endif
 	 	
 	 	</div>
@@ -617,3 +616,37 @@ function datosExt(){
 //---------------------------------------------------------------
 
 	</script>
+	@section('scripts')
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    
+    
+
+    {{-- expr --}}
+    {{-- <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> --}}
+    <script src="{{ asset('js/plugins/piexif.min.js') }}"></script>
+    <script src="{{ asset('js/plugins/sortable.min.js') }}"></script>
+    <script src="{{ asset('js/plugins/purify.min.js') }}"></script>
+    <script src=""></script>
+    <!-- popper.min.js below is needed if you use bootstrap 4.x. You can also use the bootstrap js 
+   3.3.x versions without popper.min.js. -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <!-- bootstrap.min.js below is needed if you wish to zoom and preview file content in a detail modal
+    dialog. bootstrap 4.x is supported. You can also use the bootstrap js 3.3.x versions. -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="{{ asset('js/fileinput.min.js') }}"></script>
+    <script src="{{ asset('js/locales/es.js') }}"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
+    <script>
+        $(':input.file').fileinput({
+            theme: 'fa',
+            language: 'es',
+            showUpload:false,
+            required: true,
+            showCancel:false,
+            showCaption:false,
+            allowedFileExtensions: ["pdf", "jpg", "jpeg", "png"],
+        });
+    </script>
+@endsection
